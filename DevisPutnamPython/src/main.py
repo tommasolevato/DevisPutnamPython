@@ -1,8 +1,6 @@
 import randomGen
 import dpll
 
-#TODO: test
-
 def satProbability(n,m,k,num):
     return randomGen.satProbability(n, m, k, num)
 
