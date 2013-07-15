@@ -140,4 +140,5 @@ def dpll(clauses, symbols, model):
         return dpll(clauses, removeAll(symbols,P), copyAndAppend(model,[P,value]))
     P = symbols[0]
     symbols = removeAll(symbols, P)
-    return (dpll(clauses, symbols, copyAndAppend(model, [P,True])) or dpll(clauses, symbols, copyAndAppend(model, [P,False])))
+    return (dpll(clauses, symbols, copyAndAppend(model, [P,True])) or 
+            dpll(clauses, symbols, copyAndAppend(model, [P,False])))

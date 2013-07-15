@@ -57,7 +57,7 @@ def randomSentence(symbols, m, k):
     if (m > ((2 ** k) * binomialCoefficient(len(symbols), k))):
         print 'Errore: troppe clausole!'
     clauses = []
-    while (len(clauses)):
+    while (len(clauses) < m):
         clause = generateClause(symbols,k)
         clause.sort()
         if (clause not in clauses):
